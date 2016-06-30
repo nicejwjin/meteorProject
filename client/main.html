@@ -2,10 +2,15 @@
   <title>title</title>
 </head>
 
-<body>
-<div class="container">
-  <!--navigation-->
-  {{> navbar}}
+<template name="layout">
+  <div class="container">
+    <!--navigation-->
+    {{> navbar}}
+    {{> yield}}
+  </div>
+</template>
+
+<template name="home">
   <!--carousel-->
   {{> carousel}}
   <!--input-->
@@ -16,8 +21,6 @@
 
   <!--modal-->
   {{> modal}}
-</div>
-</body>
-
+</template>
 
 
