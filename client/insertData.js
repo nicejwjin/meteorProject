@@ -22,6 +22,7 @@ Template.insertData.events(
       var image = $('#inpFile').val();
 
       if(image.length > 0) {
+        //이미지가 있을 때 이미지 저장 처리
         console.log('after');
         fileObj = tmpl.find("#inpFile").files[0]
         fileReader = new FileReader();
@@ -40,6 +41,7 @@ Template.insertData.events(
         fileReader.readAsDataURL(fileObj);
       }
       else {
+        //이미지가 없을 때 게시 글만 처리
         Boards.insert(obj);
 
         $('#inpName').val("");
